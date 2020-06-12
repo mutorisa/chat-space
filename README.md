@@ -14,11 +14,36 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name_id|string|null: false|
-|email_id|string|null: false, unique: true|
-|password_id|string|null: false, unique: true|
+|name|string|null: false|
+|email|string|null: false, unique: true|
+|password|string|null: false, unique: true|
 
 ### Association
-- belongs_to :name
-- belongs_to :email
-  belongs_to :password
+- has_many :groups_users
+- has_many :groups, through : :groups_users
+- has_many :messages
+
+## groupsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|user|string|null: false|
+
+### Association
+- has_many :groups_users
+- has_many :groups, through : :groups_users
+- has_many :messages
+
+## messageテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|body|text|
+|image|text|
+|group|references|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+
+
+### Association
+- belongs_to :user
+- belongs_to :group
