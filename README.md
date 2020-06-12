@@ -27,16 +27,14 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user|references|null: false, foreign_key: true|
-|group|references|null: false, foreign_key: true|
-
+|user|string|null: false|
 
 ### Association
 - has_many :groups_users
 - has_many :groups, through : :groups_users
 - has_many :messages
 
-## textテーブル
+## messageテーブル
 
 |Column|Type|Options|
 |------|----|-------|
