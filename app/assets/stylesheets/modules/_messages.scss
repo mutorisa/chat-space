@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper{
+  .chat-side {
+    width: 300px;
+    height: 100vh;
+    color: white;
+    float: left;
+    background-color: #253141;
+  }
+
+  .chat-main {
+    width: calc(100vw - 300px);
+    height: 100vh;
+    float: left;
+    background-color: #ffffff;
+  }
+
+}
