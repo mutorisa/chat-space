@@ -30,10 +30,20 @@ a {
           display: flex;
       }
     }
+    .groups {
+      height: calc(100vh - 100px);
+      background-color: #2f3e51;
+      padding: 20px 20px 0;
+      overflow: scroll;
+
+      .group {
+        margin-bottom: 40px;
+      }
+    }
   }
 
     
-  }
+}
 
   .chat-main {
     width: calc(100vw - 300px);
@@ -42,11 +52,9 @@ a {
     background-color: #ffffff;
   }
 
-  .chat-side .groups {
-    height: calc(100vh - 100px);
-    background-color: #2f3e51;
-    padding: 20px 20px 0;
-    overflow: scroll;
+}
 
-  }
+.chat-side .groups .group__group-name {
+  font-size: 15px;
+  margin-bottom: 5px;
 }
