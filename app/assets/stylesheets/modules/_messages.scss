@@ -30,7 +30,7 @@ a {
           display: flex;
       }
     }
-    .groups {
+    .chat-side .groups {
       height: calc(100vh - 100px);
       background-color: #2f3e51;
       padding: 20px 20px 0;
@@ -50,11 +50,71 @@ a {
     height: 100vh;
     float: left;
     background-color: #ffffff;
+
   }
 
 }
 
 .chat-side .groups .group__group-name {
   font-size: 15px;
-  margin-bottom: 5px;
+  margin-bottom: 5px;  
 }
+
+.chat-side .groups .group__latest-message {
+  font-size: 11px;
+}
+
+  .chat-side .groups {
+  height: calc(100vh - 100px);
+  background-color: #2f3e51;
+  padding: 20px 20px 0;
+  overflow: scroll;
+  }
+
+  .chat-side .groups .group {
+    margin-bottom: 40px;
+}
+
+.chat-main .main-header {
+  height: 100px;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 1px #eee;
+  overflow: scroll;
+}
+
+.chat-main .main-header__left-box {
+  margin-top: 35px;
+}
+
+.chat-main .main-header__left-box__current-group {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+  .chat-main .main-header__left-box__member-list {
+    display: flex;
+    font-size: 12px;
+    color: #999999;
+  }
+
+  .chat-main .main-header__left-box__member-list li+li {
+    margin-left: 0.3rem;
+  }
+
+  .chat-main .main-header__edit-btn {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    margin-top: 30px;
+    border: solid 1px #38aef0;
+    position: absolute;
+    right: 40px;
+}
+
+    .chat-main .main-header a:visited, .chat-main .main-header a:hover, .chat-main .main-header a:active {
+      color: #38aef0;
+    }
+
