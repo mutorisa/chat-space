@@ -16,3 +16,12 @@
         %p.message__upper-info__talker 太郎
         %p.message__upper-info__date 2020.7.1
       %p.message__text おはよう
+
+  .form
+    %form.new_message#new_message
+      .input-box
+        %input#message_content.input-box__text
+        %label.input-box__image
+          = icon('fas', 'image')
+          %input{type: "file",class: "input-box__image__file"}
+      %input{type: "submit",value: "Send", class: "submit-btn" }
