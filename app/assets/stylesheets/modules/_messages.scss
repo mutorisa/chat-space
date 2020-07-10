@@ -67,7 +67,7 @@ a {
 
 
 
-.chat-main .main-header {
+.main-header {
   height: 100px;
   padding: 0 40px;
   display: flex;
@@ -76,11 +76,11 @@ a {
   overflow: scroll;
 }
 
-.chat-main .main-header__left-box {
+.main-header__left-box {
   margin-top: 35px;
 }
 
-.chat-main .main-header__left-box__current-group {
+.main-header__left-box__current-group {
   font-size: 20px;
   color: #333;
   margin-bottom: 15px;
@@ -92,7 +92,7 @@ a {
     color: #999999;
   }
 
-  .chat-main .main-header__left-box__member-list li+li {
+  .main-header__left-box__member-list li+li {
     margin-left: 0.3rem;
   }
 
