@@ -12,9 +12,12 @@
           = link_to edit_user_path(current_user) do
             = icon('fas','cog')
   .groups 
-    .group
-      %p.group__group-name チームりんご
-      %p.group__latest-message こんにちは
+    - current_user.groups.each do |group|
+      .group
+        = link_to group_messages_path(group) do
+          %p.group__group-name
+            = group.name 
+          %p.group__latest-message こんにちは
 
       
 

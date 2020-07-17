@@ -9,17 +9,14 @@
     .main-header__edit-btn Edit
 
   .messages
-    .message
-      .message__upper-info
-        %p.message__upper-info__talker 太郎
-        %p.message__upper-info__date 2020.7.1
-      %p.message__text おはよう
+    = render @messages
+
 
   .form
-    %form.new_message#new_message
+    = form_for [@group, @message] do |f|
       .input-box
-        %input#message_content.input-box__text
-        %label.input-box__image
+        = f.text_field :content, class: 'input-box__text',id:'message_content',placeholder: 'type a message'
+        = f.label :image, class: 'input-box__image' do
           = icon('fas', 'image')
-          %input{type: "file",class: "input-box__image__file"}
-      %input{type: "submit",value: "Send", class: "submit-btn" }
+          = f.file_field :image, class: 'input-box__image__file'
+      = f.submit 'Send', class: 'submit-btn'
