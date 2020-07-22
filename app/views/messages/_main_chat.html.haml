@@ -1,12 +1,15 @@
 .chat-main
   .main-header
     .main-header__left-box
-      .main-header__left-box__current-group グループ
+      .main-header__left-box__current-group
+        =@group.name
       %ul.main-header__left-box__member-list 
         Member : 
-        %li.main-header__left-box__member-list__member 太郎
-        %li.main-header__left-box__member-list__member 花子
-    .main-header__edit-btn Edit
+        - @group.users.each do |user|
+          %li.main-header__left-box__member-list__member
+            =user.name
+    = link_to  edit_group_path(@group) do
+      .main-header__edit-btn Edit
 
   .messages
     = render @messages
